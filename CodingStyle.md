@@ -133,3 +133,20 @@ C-features in C++
 * When including C-libraries, include-directives must be put inside
   extern "C" { } block.
 
+Functions and member functions
+------------------------------
+
+* Function parameters must be same in declaration and implementation.
+
+* When using an object as parameter, constant reference is preferred.
+
+* Function must not have undefined parameter list.
+
+* Function default parameters must be visible in declaration.
+
+* Function return value must always be defined.
+
+* Function must not return pointer to local variable.
+
+* Member function should be declared constant whenever possible.
+
