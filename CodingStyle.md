@@ -65,3 +65,35 @@ Naming conventions
 * Functions are named with first letter lowercase camelCase.
 
 * Contants are named with CAPITAL letters.
+
+Variables and Contants
+----------------------
+
+* Scope must be as small as possible. No global variables or singleton pattern
+  are used in this library.
+
+* Every variable must be initialized. Class default constructor is sufficient
+  initialization if exists.
+
+* Every variable must be declared separately.
+
+* Use of macros (#define) is forbidden. Use inline functions instead.
+
+* #define must not be used to define constants.
+
+* Variables must be cast with specific type-casting operator.
+  (static_cast, dynamic_cast, reinterpret_cast).
+
+* Use of const_cast is forbidden.
+
+* When declaring constants, const-operator should be placed after
+  the type of the variable.
+
+* ODlib declares set of integer types, which must be used in the internal
+  implementation.
+
+  Integer types: OD[u]int[8,16,32,64]
+
+* When using external libraries, library-specific types should be used.
+  Such as: GLfloat, png_voidp.
+
