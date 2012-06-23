@@ -150,3 +150,97 @@ Functions and member functions
 
 * Member function should be declared constant whenever possible.
 
+Classes and objects
+-------------------
+
+* Classes are implemented using C++ keyword class, and structures are
+  implemented using keyword struct. (C++ class==struct)
+
+* Structures can have constructor and destructor but no other functions.
+
+* Class parts are introduced in this order: public, protected, private.
+
+* Class member variables are always declared as private.
+
+* There is never implementation code in class declaration.
+
+* Classes should not have friends except in very specific situations.
+
+Memory management
+-----------------
+
+* Freeing of dynamically allocated memory is responsibility of the class
+  which allocated it (in most cases).
+
+* Operator delete must only be used for freeing memory allocated with new.
+
+* Operator delete[] must only be used for freeing memory allocated with new[].
+
+* If delete operator has a parameter of pointer variable, it is assigned with
+  0 after deletion.
+
+Object construction and destruction
+-----------------------------------
+
+* Dynamically created object destruction should be verified using
+  smart pointers.
+
+* Every class must have at least one constructor.
+
+* Constructor or destructor must not call virtual functions.
+
+* Constructor or destructor must not use global or static objects.
+
+* One parameter constructor must be prefixed with explicit keyword.
+  Except for copy constructor, which must not have this keyword.
+
+* Base class destructor must be either public virtual or protected non-virtual.
+
+* Destructor must free all resources used by object.
+
+Object copying and assignment
+--------------
+
+* Every class must have declared copy constructor and assignment operator.
+  Declaration should be in private part if it is not implemented.
+
+* Inherited class copy constructor or assignment operator must call
+  base class copy constructor or assignment operator.
+
+* Assignment operator must be protected from "assigning itself". (a = a)
+
+* Assignment operator returns *this.
+
+Inheritance
+-----------
+
+* Only public-inheritance is permitted.
+
+* Multiple inheritance is forbidden in this project.
+
+* All member functions in interface class are pure virtuals.
+
+* Inherited class constructor must call constructor of base class.
+
+* Functions in inherited class should have virtual if those are derived from
+  base class.
+
+* Non-virtual member function must not be redefined in inherited class.
+
+* Inherited virtual member function default parameter must not be redefined.
+
+Templates
+---------
+
+* Template typename parameter requirements must be documented in
+  declaration of the template.
+
+Exceptions and errors
+---------------------
+
+* Exceptions are not used in this project. However you may find situations
+  where you need to handle exceptions thrown by external libraries.
+
+* No function in ODlib should throw exception or let exceptions leak.
+
+* Class behaviour in errors should be predefined.
