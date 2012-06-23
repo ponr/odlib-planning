@@ -1,7 +1,4 @@
-odlib-planning
-==============
+ODlib
+=====
 
-OD Planning
------------
-
-aee
+This is a planning git repo for ODlib project.
