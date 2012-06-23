@@ -97,3 +97,16 @@ Variables and Contants
 * When using external libraries, library-specific types should be used.
   Such as: GLfloat, png_voidp.
 
+Whitespace
+----------
+
+* Maximum width of line is 79 characters. 
+
+* if, else, while, for, do, switch, case -operators are always followed by
+  code block.
+
+* Braces ({, }) are placed on their own lines.
+
+* Pointer and reference symbols ( *, &) do not have whitespace with type.
+  Example: ODuint16* foo;
+
