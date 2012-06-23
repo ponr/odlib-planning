@@ -1,6 +1,11 @@
 Coding Style
 ============
 
+This C++ style guide is mostly based on Tampere University of Technology,
+Faculty of Computer Science C++ style guide (in finnish) and customized for
+use in this project:
+http://www.cs.tut.fi/~oliot/kirja/tyyliopas/
+
 Code files
 ----------
 
