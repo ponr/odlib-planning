@@ -77,14 +77,9 @@ Variables and Contants
 
 * Every variable must be declared separately.
 
-* Use of macros (#define) is forbidden. Use inline functions instead.
+* Use of macros (\#define) is forbidden. Use inline functions instead.
 
-* #define must not be used to define constants.
-
-* Variables must be cast with specific type-casting operator.
-  (static_cast, dynamic_cast, reinterpret_cast).
-
-* Use of const_cast is forbidden.
+* \#define must not be used to define constants.
 
 * When declaring constants, const-operator should be placed after
   the type of the variable.
@@ -96,6 +91,16 @@ Variables and Contants
 
 * When using external libraries, library-specific types should be used.
   Such as: GLfloat, png_voidp.
+
+Typecasting
+-----------
+
+* No part of the program must rely on implicit typecasting.
+
+* Variables must be cast with specific typecasting operator.
+  (static_cast, dynamic_cast, reinterpret_cast).
+
+* Use of const_cast is forbidden.
 
 Whitespace
 ----------
@@ -109,4 +114,22 @@ Whitespace
 
 * Pointer and reference symbols ( *, &) do not have whitespace with type.
   Example: ODuint16* foo;
+
+C-features in C++
+-----------------
+
+* Program must not be exited using exit() or abort().
+
+* goto-operator is forbidden.
+
+* Use C++ streams (cin, cout, cerr, clog) instead of C Standard IO (printf(),
+  scanf(), sprintf(), ...)
+
+* Functions malloc(), realloc() and free() are forbidden, because they do not
+  handle construction and deconstruction of C++ classes.
+  Exception: If highly optimized datastructures require usage of these,
+             usage might be permitted for special cases.
+
+* When including C-libraries, include-directives must be put inside
+  extern "C" { } block.
 
