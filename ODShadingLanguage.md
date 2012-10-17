@@ -110,5 +110,10 @@ main()
 Lexical analysis
 ================
 
+See odlib.git/src/od/graphics/odsl/Lexer.hpp
+
 BNF
 ===
+
+See odlib.git/src/od/graphics/odsl/Grammar.hpp
+
